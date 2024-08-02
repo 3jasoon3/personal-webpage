@@ -6,11 +6,10 @@ import github from "/public/svg/github.svg";
 import telegram from "/public/svg/telegram.svg";
 import linkedin from "/public/svg/linkedin.svg";
 import twitter from "/public/svg/twitter.svg";
-
 import type { Metadata } from "next";
-
+import { Timeline } from "@/components/timeline";
 export const metadata: Metadata = {
-  title: "Egor Chernobrovkin"
+  title: "Egor Chernobrovkin",
 };
 
 export default function Home() {
@@ -42,18 +41,22 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <Image
-            src={photo}
-            width={240}
-            height={240}
-            alt=""
-            className={styles.personalInfoImage}
-          />
+          <div className={styles.imagesContainer}>
+            <div className={styles.imageBlackBox}></div>
+            <Image
+              src={photo}
+              width={240}
+              height={240}
+              alt=""
+              className={styles.personalInfoImage}
+            />
+          </div>
         </div>
         <div className={styles.separatorContainer}>
           <div className={styles.separator}></div>
         </div>
       </div>
+      <Timeline />
     </div>
   );
 }

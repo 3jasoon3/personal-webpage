@@ -11,6 +11,10 @@
   gap: 40px;
 }
 
+.imagesContainer {
+  display: flex;
+}
+
 .personalInfo {
   display: flex;
   flex-direction: row;
@@ -43,6 +47,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 50px;
+  padding-left: 10px;
+  padding-top: 7px;
+}
+
+.imageBlackBox {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  background: linear-gradient(140deg, #c4e0c6, #202421);
+  z-index: -1;
   border-radius: 50px;
 }
 
