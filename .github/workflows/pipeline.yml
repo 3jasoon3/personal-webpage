@@ -20,15 +20,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          clean: false
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: "20"
-      - name: Setup Pages
-        uses: actions/configure-pages@v2
-        with:
-          static_site_generator: next
+          node-version: "22.4.1"
+          cache: "npm"
+      # - name: Setup Pages
+      #   uses: actions/configure-pages@v2
+      #   with:
+      #     static_site_generator: next
       - name: Install dependencies
         run: npm ci
       - name: Build with Next.js
@@ -49,4 +52,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
