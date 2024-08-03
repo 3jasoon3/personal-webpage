@@ -1,16 +1,17 @@
-import styles from "@/styles/HomePage.module.scss";
 import Image from "next/image";
+import type { Metadata } from "next";
 import Link from "next/link";
-import photo from "/public/images/photo1.jpg";
+
+import styles from "@/styles/HomePage.module.scss";
+import photo from "/public/images/photo.jpg";
 import github from "/public/svg/github.svg";
 import telegram from "/public/svg/telegram.svg";
 import linkedin from "/public/svg/linkedin.svg";
 import twitter from "/public/svg/twitter.svg";
-
-import type { Metadata } from "next";
+import { Timeline } from "@/components/timeline";
 
 export const metadata: Metadata = {
-  title: "Egor Chernobrovkin"
+  title: "Egor Chernobrovkin",
 };
 
 export default function Home() {
@@ -21,7 +22,7 @@ export default function Home() {
           <div className={styles.personalInfoText}>
             <div className={styles.personalInfoTextMsg}>Hi! 👋</div>
             <div className={styles.personalInfoTextBio}>
-              <b style={{ color: "black" }}>I am Egor,</b> a NLP Engineer
+              <b style={{ color: "black" }}>I am Egor,</b> an NLP Engineer
               studying at Innopolis University.
             </div>
             <div className={styles.contactsContainer}>
@@ -42,17 +43,23 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <Image
-            src={photo}
-            width={240}
-            height={240}
-            alt=""
-            className={styles.personalInfoImage}
-          />
+          <div className={styles.imagesContainer}>
+            <div className={styles.imageBlackBox}></div>
+            <Image
+              src={photo}
+              width={240}
+              height={240}
+              alt=""
+              className={styles.personalInfoImage}
+            />
+          </div>
         </div>
         <div className={styles.separatorContainer}>
           <div className={styles.separator}></div>
         </div>
+      </div>
+      <div className={styles.timelineContainer}>
+        <Timeline />
       </div>
     </div>
   );
