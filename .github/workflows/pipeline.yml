@@ -2,7 +2,7 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: ["main"]
+    branches: ["feature/timeline"]
 
   workflow_dispatch:
 
@@ -21,6 +21,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          clean: false
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
