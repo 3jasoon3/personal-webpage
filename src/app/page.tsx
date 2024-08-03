@@ -1,13 +1,15 @@
-import styles from "@/styles/HomePage.module.scss";
 import Image from "next/image";
+import type { Metadata } from "next";
 import Link from "next/link";
+
+import styles from "@/styles/HomePage.module.scss";
 import photo from "/public/images/photo.jpg";
 import github from "/public/svg/github.svg";
 import telegram from "/public/svg/telegram.svg";
 import linkedin from "/public/svg/linkedin.svg";
 import twitter from "/public/svg/twitter.svg";
-import type { Metadata } from "next";
 import { Timeline } from "@/components/timeline";
+
 export const metadata: Metadata = {
   title: "Egor Chernobrovkin",
 };
