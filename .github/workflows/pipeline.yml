@@ -45,7 +45,7 @@ jobs:
         run: touch ./out/.nojekyll
 
       - name: Check repository files
-        run: ls /out
+        run: ls ./out
       
       - name: Deploy to GitHub Pages
         id: deployment
