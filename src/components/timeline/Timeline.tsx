@@ -1,7 +1,5 @@
 import React from "react";
-import styles from "./Timeline.module.scss";
 import "@/styles/globals.scss";
-import Image from "next/image";
 
 const Timeline: React.FC = () => {
   return (
