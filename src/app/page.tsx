@@ -20,7 +20,7 @@ export default function Home() {
           <div className={styles.personalInfoText}>
             <div className={styles.personalInfoTextMsg}>Hi! 👋</div>
             <div className={styles.personalInfoTextBio}>
-              <b style={{ color: "black" }}>I am Egor,</b> a NLP Engineer
+              <b style={{ color: "black" }}>I am Egor,</b> an NLP Engineer
               studying at Innopolis University.
             </div>
             <div className={styles.contactsContainer}>
@@ -56,7 +56,9 @@ export default function Home() {
           <div className={styles.separator}></div>
         </div>
       </div>
-      <Timeline />
+      <div className={styles.timelineContainer}>
+        <Timeline />
+      </div>
     </div>
   );
 }
