@@ -36,16 +36,16 @@ jobs:
       - name: Build with Next.js
         run: npm run build
 
-      - name: Add .nojekyll file to the out folder
-        run: touch ./out/.nojekyll
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: "./out"
 
+      - name: Add .nojekyll file to the out folder
+        run: touch ./out/.nojekyll
+
       - name: Check repository files
-        run: ls
+        run: ls /out
       
       - name: Deploy to GitHub Pages
         id: deployment
