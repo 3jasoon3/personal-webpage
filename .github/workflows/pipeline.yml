@@ -2,7 +2,7 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: ["main"]
+    branches: ["feature/timeline"]
 
   workflow_dispatch:
 
@@ -44,6 +44,9 @@ jobs:
         with:
           path: "./out"
 
+      - name: Check repository files
+        run: ls
+      
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
