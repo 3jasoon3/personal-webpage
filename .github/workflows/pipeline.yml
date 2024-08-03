@@ -42,7 +42,7 @@ jobs:
           path: "./out"
 
       - name: Check repository files
-        run: ls ./out
+        run: ls ./out; cat ./out/.nojekyll
       
       - name: Deploy to GitHub Pages
         id: deployment
